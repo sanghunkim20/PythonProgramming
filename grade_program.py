@@ -24,7 +24,7 @@ class Student:
 def add_student(tree, id, name, major, kor, eng, mat):
      # 학번이 집합에 있는지 확인
     if id.get() in student_ids:
-        messagebox.showerror("Error", "이미 존재하는 학번입니다.")
+        messagebox.showerror("에러", "이미 존재하는 학번입니다.")
         return
     
     new_student = Student(id.get(), major.get(), name.get(), int(kor.get()), int(eng.get()), int(mat.get())) # 학생 객체 생성
@@ -45,11 +45,11 @@ def delete_student(tree, del_id):
 
     # 학번이 집합에 없으면 오류 메시지 출력
     if student_id not in student_ids:
-        messagebox.showerror("Error", "존재하지 않는 학번입니다.")
+        messagebox.showerror("에러", "존재하지 않는 학번입니다.")
         return
     
     # 삭제 확인 메시지 출력
-    if messagebox.askyesno("삭제 확인", "정말로 삭제하시겠습니까?"):
+    if messagebox.askyesno("경고", "정말 삭제하시겠습니까?"):
         for item in tree.get_children(): # 트리 뷰에서 학생을 찾아서 삭제
             if tree.item(item, 'values')[0] == student_id: # 학번이 일치하면 삭제
                 tree.delete(item) # 트리 뷰에서 삭제
