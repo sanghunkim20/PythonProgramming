@@ -54,7 +54,7 @@ class Person:
 
 class Student(Person):
     def __init__(self, fname, lname, year):
-        super().__init__(fname, lname)
+        super().__init__(fname, lname) # 다른 클래스의 속성 및 메소드를 자동으로 불러와 해당 클래스에서도 사용이 가능하도록 해준다.
         self.graduationyear = year
 
     def welcome(self):
