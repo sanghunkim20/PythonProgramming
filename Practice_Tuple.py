@@ -152,5 +152,5 @@ students = [
 ]
 i = 0
 for student in students:
-    print(i, "번째 학생의 이름은", student["이름"], "학번은", student["학번"], "학점은", student["학점"],"입니다.")
+    print(i+1, "번째 학생의 이름은", student["이름"], "학번은", student["학번"], "학점은", student["학점"],"입니다.")
     i += 1

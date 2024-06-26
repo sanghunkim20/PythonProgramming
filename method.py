@@ -65,3 +65,27 @@ list_a = [ 1, 2, 3, 4, 5 ]
 f = lambda x : 2*x
 result = map(f, list_a)
 print(list(result))
+
+list_a = [1,2,3,4,5,6]
+result = filter(lambda x: x%2 == 0, list_a)
+print(list(result))
+
+def celsius(T):
+    return (5.0/9.0)*(T-32.0)
+f_temp = [0, 10, 20, 30, 40, 50]
+c_temp = map(celsius, f_temp)
+print(list(c_temp))
+
+def myGenerator():
+    yield 'first'
+    yield 'second'
+    yield 'third'
+
+for word in myGenerator():
+    print(word)
+
+import sys
+import time
+import calendar
+cal = calendar.month(2024, 6)
+print(cal)
